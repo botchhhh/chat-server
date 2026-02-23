@@ -28,7 +28,7 @@ const App = () => {
       ]);
 
       // Send message to backend (uses proxy if set in package.json)
-      const response = await fetch("/chat", {
+      const response = await fetch("https://ai-chatbot-api.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -2,11 +2,12 @@
   "name": "group5-server",
   "version": "1.0.0",
   "type": "module",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server.js",
-     "start": "react-scripts start",
-  "build": "react-scripts build",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/server.js"
+  },
   "dependencies": {
     "@heyputer/puter.js": "^1.0.1",
     "cors": "^2.8.6",
@@ -14,10 +15,4 @@
     "express": "^4.22.1",
     "openai": "^6.22.0"
   }
-}
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "start": "node server/server.js"
-}
 }
