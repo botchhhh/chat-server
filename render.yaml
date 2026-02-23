@@ -1,0 +1,27 @@
+services:
+  # =========================
+  # 1️⃣ Backend - Express API
+  # =========================
+  - type: web
+    name: ai-chatbot-api
+    env: node
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: node server/server.js
+    envVars:
+      - key: PUTER_AUTH_TOKEN
+        sync: false
+      - key: PORT
+        value: 10000
+
+  # =========================
+  # 2️⃣ Frontend - React (Vite)
+  # =========================
+  - type: web
+    name: ai-chatbot-frontend
+    env: static
+    plan: free
+    branch: main
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
